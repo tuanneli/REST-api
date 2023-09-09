@@ -1,9 +1,14 @@
 package service
 
-import "github.com/tuanneli/REST-api.git/pkg/repository"
+import (
+	todo "github.com/tuanneli/REST-api.git"
+	"github.com/tuanneli/REST-api.git/pkg/repository"
+)
 
 type Authorization interface {
+	createUser(user todo.User) (int, error)
 }
+
 type TodoList interface {
 }
 
